@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Domain.Entity.Cliente>
+@using Domain.Entity;
+@using Infra.Repository;
+
+@{
+    ViewBag.Title = "RelatorioCliente";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-3">
+        <a href="~/ADM/Index">
+            <img src="~/img/voltar.jpg" width="200" height="50" />
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <div class="d1">
+            <br />
+            <div id="DivIncluir" class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title text-center">Relatório Clientes</div>
+                </div>
+                @{
+                    Cliente c = new Cliente();
+                    ClienteRepository cr = new ClienteRepository();
+                    List<Cliente> cliFidelizados = new List<Cliente>(cr.ClientesFidelizados());
+                }
+
+
+                    <table class="table table-hover">
+                        <tr>
+                            <td>
+                                <label class="FonteMenuLabel text-center">Nome Cliente</label>
+                            </td>
+                            <td class="text-center">
+                                <label class="FonteMenuLabel text-center">Email Cliente</label>
+                            </td>
+                            <td>
+                                <label class="FonteMenuLabel text-center">CPF Cliente</label>
+                            </td>
+                        </tr>
+                        @foreach (var item in cliFidelizados)
+                        {
+                            <tr>
+                                <td>
+                                    @*@Html.DisplayFor(m => item.NomeUsuario)*@
+                                    @Html.LabelForModel(@item.NomeCliente , new { @class = "FonteMenu" })
+                                </td>
+                                <td class="FonteMenu text-center">
+                                    @Html.DisplayFor(m => item.EmailCliente, new { @class = "FonteMenu" })
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(m => item.CPFCliente, new { @class = "FonteMenu" })
+                                </td>
+                               
+                                    @using (Html.BeginForm("AlteraUsuarioID", "ADM", FormMethod.Get, null))
+                                    {
+                                        <td>
+                                            @Html.ActionLink("Editar", "EditCli",new {id = item.IdCliente }, new { @class = "BTN_ALt" })
+                                        </td>
+                                        <td class="BTN_ALt">
+                                            @Html.ActionLink("Excluir", "DeletCLI", new { id = item.IdCliente }, new { @class = "BTN_ALt" })
+                                        </td >
+                                    }
+
+                                
+                            </tr>
+                        }
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+    </div>
+                
+

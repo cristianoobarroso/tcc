@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Site.Models.ModelProdutos>
+@using MvcCheckBoxList.Model;
+@using Domain.Entity;
+@using Infra.Repository;
+
+
+@using (Html.BeginForm("IncluiCervejas", "ADM", FormMethod.Post))
+{
+    @Html.Label("Cerveja", new { @class = "FonteMenu" })
+    <br />
+
+
+    List<Cerveja> CervaMarcadas = new List<Cerveja>();
+    CervejaRepository cr = new CervejaRepository();
+    List<Cerveja> listCerva = new List<Cerveja>(cr.ObterTodos());
+
+
+
+
+    foreach (var item in listCerva)
+    {
+        @*<input id="ListaCerva"
+            type="checkbox"
+            value="@item.NomeCerveja" />
+                 <label>@item.NomeCerveja</label>
+                 <br />*@
+
+        <input type="checkbox" name="Ids" value="@item.NomeCerveja" />
+        @Html.DisplayFor(modelItem => item.NomeCerveja)
+
+
+
+    }
+
+
+    <input type="submit" value="Incluir Cerveja" class="btn btn-primary" />
+
+}
+

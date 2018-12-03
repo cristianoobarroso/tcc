@@ -1,0 +1,64 @@
+﻿
+.FonteMenu
+{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    /*color:#5CACEE;*/
+}
+
+
+
+
+.inputqtd
+{
+   width:10px;
+    /*color:#5CACEE;*/
+}
+
+.FonteMenuLabel
+{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    /*color:#5CACEE;*/
+}
+
+.FonteBTNUSU
+{
+   width:350px;
+   height:350px;
+   background-color:royalblue;
+}
+
+.TamanhoInput{
+    height:28px;
+}
+
+.TamanhoEditTexto{
+    height:99px;
+    width:300px;
+}
+
+.TamanhoEditTextoInput{
+    height:99px;
+}
+
+.btn {
+    background: url('../img/FUndo verde.jpg') no-repeat top left;
+    /*background-image: url('../img/FUndo verde.jpg');*/
+    display: block;
+    width: 150px;
+    height: 150px;
+    text-indent: -9999px; /* hides the link text */
+}
+
+.BTN_ALt
+{
+    background: url(../Images/fundo_verde.jpg) no-repeat top left;
+     display: block;
+     width: 150px;
+     height: 150px;
+     text-indent: -9999px; /* hides the link text */
+}
+

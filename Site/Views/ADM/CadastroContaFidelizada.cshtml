@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "CadastroContaFidelizada";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+@using Domain.Entity;
+@using Infra.Repository;
+@model Site.Models.ModelContaAvulsa
+
+
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <div id="CriarQuestionario" class="panel panel-primary">
+            <div class="panel-heading">
+                Conta Fidelizada
+            </div>
+            <div class="panel-body">
+
+                @using (Html.BeginForm("CadastroContaFidelizadaOld", "ADM", FormMethod.Post))
+                {
+
+                    ClienteRepository cl = new ClienteRepository();
+
+                   
+
+
+                    List<Cliente> listcerv = new List<Cliente>(cl.ClientesFidelizados());
+
+
+                    List<SelectListItem> listaCli = new List<SelectListItem>();
+
+
+
+
+
+                    foreach (var itemcerva in listcerv)
+                    {
+                        listaCli.Add(new SelectListItem
+                        {
+                            Text = itemcerva.NomeCliente,
+                            Value = Convert.ToString(itemcerva.IdCliente)
+                        });
+                    }
+
+
+
+
+                    ViewBag.cli = new SelectList(listaCli, "NomeCliente");
+
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Clientes
+                        </div>
+                        <div class="panel-body">
+                         
+                            @Html.DropDownList("IdsCli", listaCli, "selecione")
+                            <br />
+                          
+
+
+                        </div>
+                    </div>
+
+                    <br />
+
+
+                   
+
+
+
+
+                    <button type="submit" class="btn btn-success btn-sm">Incluir Pedido </button>
+                    <a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Finalizar</a>
+
+
+
+                }
+
+
+            </div>
+
+
+
+            <br />
+            <div class="text-center">
+                <label class="FonteMenu">@ViewBag.Mensagem</label>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+    </div>
+</div>
+
+
+
+

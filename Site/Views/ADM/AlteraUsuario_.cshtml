@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "AlteraUsuario_";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @model Site.Models.ModelCliente
+        @using (Html.BeginForm("AlterarClienteID", "ADM", FormMethod.Post))
+        {
+            <div class="modal-header">
+                <h4 class="modal-title">Editar Cliente</h4>
+            </div>
+
+
+
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon">Nome</span>
+                        @Html.TextBoxFor(u => u.NomeCliente, new { @class = "form-control FonteMenu", @placeholder = "Digite aqui", style = "height:28px;width:450px;", autocomplete = "off" })
+                        @Html.ValidationMessageFor(u => u.NomeCliente)
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon">CPF</span>
+                        @Html.TextBoxFor(u => u.CPFCliente, new { @class = "form-control FonteMenu", @placeholder = "Digite aqui", style = "height:28px;width:450px;", autocomplete = "off" })
+                        @Html.ValidationMessageFor(u => u.CPFCliente)
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon">Email</span>
+                        @Html.TextBoxFor(u => u.EmailCliente, new { @class = "form-control FonteMenu", @placeholder = "Digite aqui", style = "height:28px; width:450px;", autocomplete = "off" })
+                        @Html.ValidationMessageFor(u => u.EmailCliente)
+                    </div>
+
+                   
+                    </div>
+                    @Html.HiddenFor(u => u.IdCliente)
+                </div>
+
+         
+            <div class="modal-footer">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                @*<input type="button" value="Cancelar" class="btn btn-default" data-dismiss="modal" />*@
+            </div>
+            <div class="text-center">
+                <label class="FonteMenu">@ViewBag.Mensagem</label>
+            </div>
+                            }
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+

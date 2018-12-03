@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+   
+
+</head>
+<body>
+    <div class="container">
+        <div class="well well-sm">
+            <div class="col-sm-1 text-left">
+                <label>Casa Fragni</label>
+            </div>
+            <div class="col-sm-15 text-right ">
+                <img src="~/img/instituto-infnet-original.png" width="25" />
+            </div>
+        </div>
+
+        <div id=Identificação class="text-right">
+            @using Domain.Entity;
+            @if (Session["usuariologado"] != null)
+            {
+                Fucionario u = (Fucionario)Session["usuariologado"];
+                <label class="FonteMenu">Seja bem vindo @u.NomeFuncionario</label>
+            }
+            <br />
+            <label class="FonteMenu">@DateTime.Now.ToString("dd/MM/yyyy")</label>
+            <br />
+            <a href="/ADM/Logout" class="btn btn-danger btn-sm"> Sair</a>
+        </div>
+
+        <!-- Local para entrada do conteudo das demais páginas -->
+        @RenderBody()
+
+        <footer>
+            © @DateTime.Now.Year
+        </footer>
+
+    </div>
+</body>
+</html>

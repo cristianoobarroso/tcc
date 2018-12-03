@@ -1,0 +1,26 @@
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\Infra.dll.config
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\Infra.dll
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\Infra.pdb
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\Domain.dll
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\EntityFramework.dll
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\Domain.pdb
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\EntityFramework.xml
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\obj\Debug\Infra.csprojResolveAssemblyReference.cache
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\obj\Debug\Infra.dll
+C:\Users\i.anderson\Desktop\Buffet\Buffet\Infra\obj\Debug\Infra.pdb
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\Infra.dll.config
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\Infra.dll
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\Infra.pdb
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\Domain.dll
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\EntityFramework.dll
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\Domain.pdb
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\EntityFramework.xml
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.csprojAssemblyReference.cache
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.csproj.CoreCompileInputs.cache
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.csproj.CopyComplete
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.dll
+C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.pdb
