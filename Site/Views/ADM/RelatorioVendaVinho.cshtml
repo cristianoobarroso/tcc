@@ -1,0 +1,319 @@
+﻿@using Domain.Entity;
+@using Infra.Repository;
+@using System.Linq;
+@{
+    ViewBag.Title = "RelatorioVendaVinho";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-3">
+        <a href="~/ADM/Relatorio_Produtos">
+            <img src="~/img/voltar.png" width="120" height="120" />
+        </a>
+    </div>
+</div>
+
+
+@{
+    Cliente c = new Cliente();
+    ClienteRepository cr = new ClienteRepository();
+    List<Cliente> cliFidelizados = new List<Cliente>(cr.ClientesFidelizados());
+    ItemRepository ir = new ItemRepository();
+    ContaRepository cro = new ContaRepository();
+
+
+    List<ItemConta> listItemVendidos = new List<ItemConta>(ir.ObterTodos());
+    List<Conta> listContas = new List<Conta>(cro.ObterTodos());
+
+
+
+    var vinhosVendidos = listContas.Join(listItemVendidos
+         , co => co.IdConta,
+           it => it.IdConta,
+          (conta, item) => new
+          {
+              conta,
+              item
+          }).Where(i => i.conta.StatusConta == true && i.item.TpProduto == 1)
+          .GroupBy(g => new {
+              g.item.NomeProduto
+          }).
+          Select(s => new
+          {
+              s.Key.NomeProduto,
+              total = s.Sum( x => x.item.QtdItem)
+          })        
+          .OrderByDescending(x => x.total)
+          .ToList()
+          ;
+
+
+
+    var cervejasVendidas = listContas.Join(listItemVendidos
+         , co => co.IdConta,
+           it => it.IdConta,
+          (conta, item) => new
+          {
+              conta,
+              item
+          }).Where(i => i.conta.StatusConta == true && i.item.TpProduto == 2)
+          .GroupBy(g => new
+          {
+              g.item.NomeProduto
+          }).
+          Select(s => new
+          {
+              s.Key.NomeProduto,
+              total = s.Sum(x => x.item.QtdItem)
+          })
+          .OrderByDescending(x => x.total)
+          .ToList()
+          ;
+
+
+    var queijosVendidos = listContas.Join(listItemVendidos
+         , co => co.IdConta,
+           it => it.IdConta,
+          (conta, item) => new
+          {
+              conta,
+              item
+          }).Where(i => i.conta.StatusConta == true && i.item.TpProduto == 3)
+          .GroupBy(g => new
+          {
+              g.item.NomeProduto
+          }).
+          Select(s => new
+          {
+              s.Key.NomeProduto,
+              total = s.Sum(x => x.item.QtdItem)
+          })
+          .OrderByDescending(x => x.total)
+          .ToList()
+          ;
+
+
+    var pratosVendidos = listContas.Join(listItemVendidos
+         , co => co.IdConta,
+           it => it.IdConta,
+          (conta, item) => new
+          {
+              conta,
+              item
+          }).Where(i => i.conta.StatusConta == true && i.item.TpProduto == 4)
+          .GroupBy(g => new
+          {
+              g.item.NomeProduto
+          }).
+          Select(s => new
+          {
+              s.Key.NomeProduto,
+              total = s.Sum(x => x.item.QtdItem)
+          })
+          .OrderByDescending(x => x.total)
+          .ToList()
+          ;
+
+
+
+    var servicosVendidos = listContas.Join(listItemVendidos
+         , co => co.IdConta,
+           it => it.IdConta,
+          (conta, item) => new
+          {
+              conta,
+              item
+          }).Where(i => i.conta.StatusConta == true && i.item.TpProduto == 5)
+          .GroupBy(g => new
+          {
+              g.item.NomeProduto
+          }).
+          Select(s => new
+          {
+              s.Key.NomeProduto,
+              total = s.Sum(x => x.item.QtdItem)
+          })
+          .OrderByDescending(x => x.total)
+          .ToList()
+          ;
+}
+
+
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <div class="d1">
+            <br />
+            <div id="DivIncluir" class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title text-center">Relatório Vendas</div>
+                </div>
+                @*<div class="panel-body">*@
+                <h4 class="text-center">Vinhos</h4>
+                    @{ if (vinhosVendidos.Count > 0)
+                        {
+                            <table class="table table-striped table-bordered table-hover table-condensed">
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Item </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Quantidade</label>
+                                    </td>
+                                </tr>
+                                @foreach (var item in vinhosVendidos)
+                                {
+                                    if (item.total > 0)
+                                    {
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.NomeProduto</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.total</label>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        } }
+
+                <br />
+                    @if (cervejasVendidas.Count > 0)
+                    {
+                        <h4 class="text-center">Cerveja</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover table-condensed">
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Item </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Quantidade</label>
+                                    </td>
+                                </tr>
+                                @foreach (var item in cervejasVendidas)
+                                {
+                                    if (item.total > 0)
+                                    {
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.NomeProduto</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.total</label>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </div>
+                    }
+                <br />
+                    @if (pratosVendidos.Count > 0)
+                    {
+                        <h4 class="text-center">Prato</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover table-condensed">
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Item </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Quantidade</label>
+                                    </td>
+                                </tr>
+                                @foreach (var item in pratosVendidos)
+                                {
+                                    if (item.total > 0)
+                                    {
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.NomeProduto</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.total</label>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </div>
+                    }
+
+                <br />
+                    @if (queijosVendidos.Count > 0)
+                    {
+                        <h4 class="text-center">Queijo</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover table-condensed">
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Item </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Quantidade</label>
+                                    </td>
+                                </tr>
+                                @foreach (var item in queijosVendidos)
+                                {
+                                    if (item.total > 0)
+                                    {
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.NomeProduto</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.total</label>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </div>
+                    }
+
+                <br />
+                    @if (servicosVendidos.Count > 0)
+                    {
+                        <h4 class="text-center">Buffet</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover table-condensed">
+                                <tr>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Item </label>
+                                    </td>
+                                    <td class="text-center">
+                                        <label class="FonteMenuLabel text-center">Quantidade</label>
+                                    </td>
+                                </tr>
+                                @foreach (var item in servicosVendidos)
+                                {
+                                    if (item.total > 0)
+                                    {
+                                        <tr>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.NomeProduto</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <label class="FonteMenuLabel text-center">@item.total</label>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </table>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+@*</div>*@
+<div class="col-sm-3">
+</div>
+
+
+

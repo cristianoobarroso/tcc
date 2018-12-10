@@ -9,5 +9,7 @@ namespace Domain.Service
 {
   public  interface IServiceMassa : IServiceBase<Massa, Int32>
     {
+        List<Massa> listPrato(string nome);
+
     }
 }

@@ -16,6 +16,8 @@ namespace Infra.Configurations
             Property(m => m.NomeQueijo).HasMaxLength(100).HasColumnName("NomeProduto").IsRequired();
             Property(m => m.TipoQueijo).HasColumnName("DataVenda").IsRequired();
             Property(m => m.QTDQueijoEstoque).HasColumnName("QTDQueijoEstoque").IsRequired();
+            Property(m => m.Nacionalidade).HasMaxLength(100).HasColumnName("Nacionalidade").IsRequired();
+            Property(m => m.Valor).HasColumnName("Valor").IsRequired();
 
         }
     }

@@ -9,5 +9,7 @@ namespace Domain.Service
 {
   public  interface IServiceBuffet : IServiceBase<Buffet , Int32>
     {
+        List<Buffet> listBuffet(string nome);
+
     }
 }

@@ -24,3 +24,17 @@ C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.csproj.CoreCompil
 C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.csproj.CopyComplete
 C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.dll
 C:\Users\Fabricio Barroso\Desktop\Buffet\Infra\obj\Debug\Infra.pdb
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\Infra.dll.config
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\Infra.dll
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\Infra.pdb
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\Domain.dll
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\EntityFramework.dll
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\Domain.pdb
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\EntityFramework.xml
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.csprojResolveAssemblyReference.cache
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.dll
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.pdb
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.Migrations.InitialCreate.resources
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.csproj.GenerateResource.Cache

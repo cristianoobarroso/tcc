@@ -8,15 +8,16 @@ namespace Infra.Configurations
     {
         public MassaConfiguration()
         {
-            ToTable("Tb_Massa");
+            ToTable("Tb_Prato");
             HasKey(m => m.IdMassa);
             Property(m => m.IdMassa).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)
-                .HasColumnName("IdMassa").IsRequired();
+                .HasColumnName("IdPrato").IsRequired();
 
             Property(m => m.TpProduto).HasColumnName("TpProduto").IsRequired();
-            Property(m => m.NomeMassa).HasMaxLength(100).HasColumnName("NomeMassa").IsRequired();
-            Property(m => m.TipoMassa).HasColumnName("TipoMassa").IsRequired();
-            Property(m => m.QTDEMassaEstoque).HasColumnName("QTDEMassaEstoque").IsRequired();
+            Property(m => m.NomeMassa).HasMaxLength(100).HasColumnName("NomePrato").IsRequired();
+           // Property(m => m.TipoMassa).HasColumnName("TipoPrato").IsRequired();
+            Property(m => m.Valor).HasColumnName("Valor").IsRequired();
+            // Property(m => m.QTDEMassaEstoque).HasColumnName("QTDEMassaEstoque").IsRequired();
         }
     }
 }

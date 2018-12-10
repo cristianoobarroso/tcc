@@ -63,47 +63,46 @@
                     ViewBag.vinho = new SelectList(listaVinho, "NomeVinho");
                     ViewBag.massa = new SelectList(listaMassa, "NomeMassa");
 
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Cervejas
+                        </div>
+                        <div class="panel-body">
 
-
-
+                            @Html.Label("Número da mesa")
+                            <input type="text" name="nMesa" width="10" height="10" />
+                            <input type="hidden" name="buffet" value="1" />
+                        </div>
+                    </div>
 
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             Cervejas
                         </div>
                         <div class="panel-body">
-                            <input type="text" name="qtdCerva" width="10" height="10" />
+                            <input type="text" name="qtdCerva" width="10" height="10" value="0" />
                             @Html.DropDownList("IdsCerva", (IEnumerable<SelectListItem>)ViewBag.cerva, "selecione")
-
-
                         </div>
                     </div>
-
                     <br />
-
-
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             Queijos
                         </div>
                         <div class="panel-body">
-                            <input type="text" name="qtdQueijo" width="10" height="10" />
+                            <input type="text" name="qtdQueijo" width="10" height="10" value="0" />
                             @Html.DropDownList("IdQueijos", (IEnumerable<SelectListItem>)ViewBag.queijo, "selecione")
 
                         </div>
                     </div>
-
-
                     <br />
-
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             Vinhos
                         </div>
                         <div class="panel-body">
-                            <input type="text" name="qtdVinho" width="10" height="10" />
+                            <input type="text" name="qtdVinho" width="10" height="10" value="0" />
                             @Html.DropDownList("IdsVinhos", (IEnumerable<SelectListItem>)ViewBag.vinho, "selecione")
-
                         </div>
                     </div>
                     <br />
@@ -114,31 +113,18 @@
                             Massas
                         </div>
                         <div class="panel-body">
-                            <input type="text" name="qtdMassa" width="10" height="10" />
+                            <input type="text" name="qtdMassa" width="10" height="10" value="0" />
                             @Html.DropDownList("IdsMassas", (IEnumerable<SelectListItem>)ViewBag.massa, "selecione")<SelectListItem>
                         </div>
                     </div>
-
-
-                    @Html.Label("Número mesa")
-                    <input type="text" name="nMesa" width="10" height="10" />
-
                     <button type="submit" class="btn btn-success btn-sm">Incluir Pedido </button>
-                    <a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Finalizar</a>
-
-
-
+                    @*<a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Finalizar</a>*@
                 }
 
-
             </div>
-
-
-
             <br />
             <div class="text-center">
                 <label class="FonteMenu">@ViewBag.Mensagem</label>
-
             </div>
         </div>
     </div>

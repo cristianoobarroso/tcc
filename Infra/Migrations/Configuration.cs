@@ -10,6 +10,7 @@ namespace Infra.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            ContextKey = "Infra.DataSource.DataContext";
         }
 
         protected override void Seed(Infra.DataSource.DataContext context)

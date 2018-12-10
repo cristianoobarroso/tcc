@@ -13,5 +13,7 @@ namespace Domain.Entity
         public virtual string NomeVinho { get; set; }
         public virtual int TpProduto { get; set; }
         public virtual int QTDVinhoEstoque { get; set; }
+        public virtual string Nacionalidade { get; set; }
+        public virtual decimal ValorVinho { get; set; }
     }
 }

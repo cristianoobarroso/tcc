@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "AlteraFuncionario_";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        @model Site.Models.ModelFuncionario
+        @using (Html.BeginForm("AlterarFuncionarioID", "ADM", FormMethod.Post))
+        {
+            <div class="modal-header">
+                <h4 class="modal-title">Editar Funcionário</h4>
+            </div>
+
+
+
+            <div class="modal-body">
+
+                <div class="form-horizontal">
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon">Nome</span>
+                        @Html.TextBoxFor(u => u.NomeFuncionario, new { @class = "form-control FonteMenu", @placeholder = "Digite aqui", style = "height:28px;width:450px;", autocomplete = "off" })
+                        @Html.ValidationMessageFor(u => u.NomeFuncionario)
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon">CPF</span>
+                        @Html.TextBoxFor(u => u.Login, new { @class = "form-control FonteMenu", @placeholder = "Digite aqui", style = "height:28px;width:450px;", autocomplete = "off" })
+                        @Html.ValidationMessageFor(u => u.Login)
+                    </div>
+                    @{
+                        List<SelectListItem> listPerfil = new List<SelectListItem>();
+
+                        listPerfil.Add(new SelectListItem
+                        {
+                            Text = "Gerente",
+                            Value = "2",
+                            // Selected =
+                        });
+                        listPerfil.Add(new SelectListItem
+                        {
+                            Text = "Garçom",
+                            Value = "1",
+                            //Selected =
+                        });
+                    }
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon">Email</span>
+                        @Html.DropDownListFor(u => u.Perfil, listPerfil, new { style = "height:28px;" })
+                        @Html.ValidationMessageFor(u => u.Perfil)                   
+                    </div>
+                </div>
+                @Html.HiddenFor(u => u.IdFuncionario)
+                @Html.HiddenFor(u => u.Senha)
+            </div>
+
+
+            <div class="modal-footer">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                @*<input type="button" value="Cancelar" class="btn btn-default" data-dismiss="modal" />*@
+            </div>
+                <div class="text-center">
+                    <label class="FonteMenu">@ViewBag.Mensagem</label>
+                </div>
+                        }
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

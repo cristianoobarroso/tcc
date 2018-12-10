@@ -10,5 +10,6 @@ namespace Domain.Service
   public  interface IServiceConta  : IServiceBase<Conta, Int32>
     {
         Conta UltimaConta();
+       // IEnumerable<Conta> RelatorioConta();
     }
 }

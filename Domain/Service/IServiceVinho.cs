@@ -9,5 +9,7 @@ namespace Domain.Service
 {
    public interface IServiceVinho : IServiceBase<Vinho, Int32>
     {
+        List<Vinho> listVinho(string nome);
+
     }
 }

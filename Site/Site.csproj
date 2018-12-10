@@ -209,6 +209,7 @@
     <Compile Include="Models\ModelMassa.cs" />
     <Compile Include="Models\ModelProdutos.cs" />
     <Compile Include="Models\ModelQueijo.cs" />
+    <Compile Include="Models\ModelUsuario.cs" />
     <Compile Include="Models\ModelVinho.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -224,6 +225,7 @@
     <Content Include="img\cerveja.jpg" />
     <Content Include="img\conta_menu_principal.png" />
     <Content Include="img\CriarQuestionario.jpg" />
+    <Content Include="img\duffet.png" />
     <Content Include="img\fundo_verde.jpg" />
     <Content Include="img\pratos.jpg" />
     <Content Include="img\queijo.jpg" />
@@ -278,6 +280,23 @@
     <Content Include="Views\ADM\Relatorios.cshtml" />
     <Content Include="Views\ADM\RelatorioCliente.cshtml" />
     <Content Include="Views\ADM\AlteraUsuario_.cshtml" />
+    <Content Include="Views\ADM\RelatorioUsuario.cshtml" />
+    <Content Include="Views\ADM\AlteraFuncionario_.cshtml" />
+    <Content Include="Views\ADM\CadastroBuffet.cshtml" />
+    <Content Include="Views\ADM\Relatorio_Produtos.cshtml" />
+    <Content Include="Views\ADM\RelatorioVendaVinho.cshtml" />
+    <Content Include="Views\ADM\Venda_conta_buffet.cshtml" />
+    <Content Include="Views\ADM\Venda_conta_buffet_itens.cshtml" />
+    <Content Include="Views\ADM\MenuProdCadastro.cshtml" />
+    <Content Include="Views\ADM\CervejasCadastradas.cshtml" />
+    <Content Include="Views\ADM\QueijosCadastrados.cshtml" />
+    <Content Include="Views\ADM\VinhosCadastrados.cshtml" />
+    <Content Include="Views\ADM\PratosCadastrados.cshtml" />
+    <Content Include="Views\ADM\BuffetCadastrado.cshtml" />
+    <Content Include="Views\ADM\ContasAbertas_.cshtml" />
+    <Content Include="Views\ADM\EditarContaAberta_.cshtml" />
+    <Content Include="Views\ADM\VerificarContaAberta.cshtml" />
+    <Content Include="Views\ADM\IndexGarçom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

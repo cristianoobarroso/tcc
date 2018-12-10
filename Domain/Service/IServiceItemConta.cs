@@ -9,5 +9,7 @@ namespace Domain.Service
 {
   public  interface IServiceItemConta :  IServiceBase<ItemConta, Int32>
     {
+        List<ItemConta> ListContasAbertas(int idConta);
+        List<ItemConta> ListContasDetalhe(int idConta);
     }
 }

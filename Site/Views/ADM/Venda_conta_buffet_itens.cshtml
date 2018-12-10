@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Venda_conta_buffet_itens";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+@using Domain.Entity;
+@using Infra.Repository
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <div id="CriarQuestionario" class="panel panel-primary">
+            <div class="panel-heading">
+                Conta Buffet
+            </div>
+            <div class="panel-body">
+
+                @using (Html.BeginForm("CadastroContaAvulsaOld", "ADM", FormMethod.Post))
+                {
+                   
+                    BuffetRepository br = new BuffetRepository();                 
+                    List<Buffet> listBuffet = new List<Buffet>(br.ObterTodos());                   
+                    List<string> listaBuffet = new List<string>();
+
+                   
+                    foreach (var itemcerva in listBuffet)
+                    {
+                        listaBuffet.Add(itemcerva.NomeBuffet);
+                    }
+
+                  
+                    ViewBag.Buffet = new SelectList(listaBuffet, "NomeBuffet");
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Buffet
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" name="qtdMassa" width="10" height="10" value="1" />
+                            @Html.DropDownList("IdsBuffet", (IEnumerable<SelectListItem>)ViewBag.Buffet, "Selecione")<SelectListItem>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm">Incluir Pedido </button>
+                    <a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Finalizar</a>
+                }
+
+            </div>
+            <br />
+            <div class="text-center">
+                <label class="FonteMenu">@ViewBag.Mensagem</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+    </div>
+</div>
+
+

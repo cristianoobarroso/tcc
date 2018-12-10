@@ -13,9 +13,10 @@ namespace Infra.Configurations
             Property(m => m.IdVenda).HasDatabaseGeneratedOption(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)
                 .HasColumnName("IdVenda").IsRequired();
 
-            Property(m => m.TpProduto).HasColumnName("TpProduto").IsRequired();
-            Property(m => m.NomeProduto).HasMaxLength(100).HasColumnName("NomeProduto").IsRequired();
+           // Property(m => m.TpProduto).HasColumnName("TpProduto").IsRequired();
+           // Property(m => m.NomeProduto).HasMaxLength(100).HasColumnName("NomeProduto").IsRequired();
             Property(m => m.DataVenda).HasColumnName("DataVenda").IsRequired();
+            Property(m => m.ValorVenda).HasColumnName("ValorVenda").IsRequired();
         }
     }
 }

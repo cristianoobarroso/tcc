@@ -9,3 +9,8 @@ C:\Users\Fabricio Barroso\Desktop\Buffet\Domain\obj\Debug\Domain.csprojAssemblyR
 C:\Users\Fabricio Barroso\Desktop\Buffet\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Fabricio Barroso\Desktop\Buffet\Domain\obj\Debug\Domain.dll
 C:\Users\Fabricio Barroso\Desktop\Buffet\Domain\obj\Debug\Domain.pdb
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Domain\bin\Debug\Domain.dll
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Domain\bin\Debug\Domain.pdb
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Domain\obj\Debug\Domain.dll
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Domain\obj\Debug\Domain.pdb
+C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache

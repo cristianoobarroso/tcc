@@ -3,7 +3,13 @@
     ViewBag.Title = "Relatorios";
     Layout = "~/SharedMaster/MasterADM.cshtml";
 }
-
+<div class="row">
+    <div class="col-sm-3">
+        <a href="~/ADM/Index">
+            <img src="~/img/voltar.png" width="120" height="120" />
+        </a>
+    </div>
+</div>
 <div class="container">
     <br />
     <br />
@@ -19,7 +25,7 @@
    
     <div class="row">
 
-        <div class="col-sm-6">
+        <div class="col-sm-3">
             <div id="DivCriarFormulario" class="text-right">
                 <a href="~/ADM/RelatorioCliente">
                     @*<img src="~/img/CriarQuestionario.png" width="150" height="150" />*@
@@ -38,9 +44,9 @@
             </div>*@
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <div id="DivEnvioResult" class="text-center">
-                <a href="~/ADM/CadastroUsuario">
+                <a href="~/ADM/RelatorioUsuario">
                     @*<img src="~/img/user.png" width="150" height="150" />*@
                     @*<br />*@
                     <h4 class="FonteMenu">Relatório de Usuários</h4>
@@ -59,14 +65,25 @@
 
 
 
-        <div class="col-sm-2">
-            @*<div id="DivEnvioQuestionario" class="text-center">
-                <a href="~/ADM/CadastroConta">
-                    <img src="~/img/conta_menu_principal.png" width="150" height="150" />
-                    <br />
-                    <h4 class="FonteMenu"> Abrir Conta </h4>
+        <div class="col-sm-3">
+           <div id="DivEnvioQuestionario" class="text-center">
+                <a href="~/ADM/Relatorio_Produtos">
+                    @*<img src="~/img/conta_menu_principal.png" width="150" height="150" />*@
+                    @*<br />*@
+                    <h4 class="FonteMenu"> Relatório De Vendas </h4>
                 </a>
-            </div>*@
+            </div>
+        </div>
+
+
+        <div class="col-sm-3">
+            <div id="DivEnvioQuestionario" class="text-center">
+                <a href="~/ADM/MenuProdCadastro">
+                    @*<img src="~/img/conta_menu_principal.png" width="150" height="150" />*@
+                    @*<br />*@
+                    <h4 class="FonteMenu"> Relatório De Produtos cadastrados </h4>
+                </a>
+            </div>
         </div>
 
 

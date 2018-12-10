@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "CervejasCadastradas";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+@using Domain.Entity
+@using Infra.Repository;
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <a href="~/ADM/MenuProdCadastro">
+            <img src="~/img/voltar.png" width="120" height="120" />
+        </a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <div class="d1">
+            <br />
+            <div id="DivIncluir" class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title text-center">Cervejas Cadastradas</div>
+                </div>
+                @{
+                    CervejaRepository vr = new CervejaRepository();
+                    List<Cerveja> listCerveja = new List<Cerveja>(vr.ObterTodos());
+                }
+                <table class="table table-striped table-bordered table-hover table-condensed">
+                    <tr>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">Nome </label>
+                        </td>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">Valor </label>
+                        </td>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">Quantidade </label>
+                        </td>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">Nacionalidade</label>
+                        </td>
+                    </tr>
+                    @foreach (var item in listCerveja)
+                    {
+                        <tr>
+                            <td class="text-center">
+                                <label class="FonteMenuLabel text-center">@item.NomeCerveja</label>
+                            </td>
+                            <td class="FonteMenu text-center">
+                                <label class="FonteMenuLabel text-center">@item.ValorCerveja</label>
+                            </td>
+                            <td class="text-center">
+                                <label class="FonteMenuLabel text-center">@item.QTDCervejaEstoque</label>
+                            </td>
+                            <td class="text-center">
+                                <label class="FonteMenu text-center">@item.NacionalidadeCerveja</label>
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-sm-3">
+</div>
+
+
+

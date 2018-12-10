@@ -9,5 +9,6 @@ namespace Domain.Service
 {
     public interface IServiceCerveja : IServiceBase<Cerveja, Int32>
     {
+        List<Cerveja> listCerva(string nome);
     }
 }

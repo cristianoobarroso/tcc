@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewBag.Title = "EditarContaAberta_";
+    Layout = "~/SharedMaster/MasterADM.cshtml";
+}
+
+@using Domain.Entity;
+@using Infra.Repository;
+@model Site.Models.ModelContaAvulsa
+
+
+
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+        <div id="CriarQuestionario" class="panel panel-primary">
+            <div class="panel-heading">
+                Conta avulsa
+            </div>
+            <div class="panel-body">
+
+                @using (Html.BeginForm("EditarContaAberta_Old", "ADM", FormMethod.Post))
+                {
+                    CervejaRepository cra = new CervejaRepository();
+                    QueijoRepository crq = new QueijoRepository();
+                    VinhoRepository crv = new VinhoRepository();
+                    MassaRepository crm = new MassaRepository();
+
+                    List<Cerveja> listcerv = new List<Cerveja>(cra.ObterTodos());
+                    List<Queijo> listqueij = new List<Queijo>(crq.ObterTodos());
+                    List<Vinho> listvinh = new List<Vinho>(crv.ObterTodos());
+                    List<Massa> listmass = new List<Massa>(crm.ObterTodos());
+
+                    List<string> listaCerveja = new List<string>();
+                    List<string> listaQueijo = new List<string>();
+                    List<string> listaVinho = new List<string>();
+                    List<string> listaMassa = new List<string>();
+
+                    foreach (var itemcerva in listcerv)
+                    {
+                        listaCerveja.Add(itemcerva.NomeCerveja);
+                    }
+                    foreach (var itemcerva in listqueij)
+                    {
+                        listaQueijo.Add(itemcerva.NomeQueijo);
+                    }
+                    foreach (var itemcerva in listvinh)
+                    {
+                        listaVinho.Add(itemcerva.NomeVinho);
+                    }
+                    foreach (var itemcerva in listmass)
+                    {
+                        listaMassa.Add(itemcerva.NomeMassa);
+                    }
+
+                    ViewBag.cerva = new SelectList(listaCerveja, "NomeCerveja");
+                    ViewBag.queijo = new SelectList(listaQueijo, "NomeQueijo");
+                    ViewBag.vinho = new SelectList(listaVinho, "NomeVinho");
+                    ViewBag.massa = new SelectList(listaMassa, "NomeMassa");
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Cervejas
+                        </div>
+                        <div class="panel-body">
+                            @{ var numero = "";
+                                numero = Request.QueryString["nMesa"];}
+
+                            @Html.Label("Número da mesa")
+                            <input type="text" name="nMesa" width="10" height="10" value="@Request.QueryString["nMesa"]" />
+                            <input type="hidden" name="buffet" value="1" />
+                        </div>
+                    </div>
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Cervejas
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" name="qtdCerva" width="10" height="10" value="0" />
+                            @Html.DropDownList("IdsCerva", (IEnumerable<SelectListItem>)ViewBag.cerva, "selecione")
+                        </div>
+                    </div>
+                    <br />
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Queijos
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" name="qtdQueijo" width="10" height="10" value="0" />
+                            @Html.DropDownList("IdQueijos", (IEnumerable<SelectListItem>)ViewBag.queijo, "selecione")
+
+                        </div>
+                    </div>
+                    <br />
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Vinhos
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" name="qtdVinho" width="10" height="10" value="0" />
+                            @Html.DropDownList("IdsVinhos", (IEnumerable<SelectListItem>)ViewBag.vinho, "selecione")
+                        </div>
+                    </div>
+                    <br />
+
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            Massas
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" name="qtdMassa" width="10" height="10" value="0" />
+                            @Html.DropDownList("IdsMassas", (IEnumerable<SelectListItem>)ViewBag.massa, "selecione")<SelectListItem>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm">Incluir Pedido </button>
+                    @*<a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Finalizar</a>*@
+                                <input type="hidden" name="idContaOpem" width="10" height="10" value="@Request.QueryString["idContaOpem"]" />
+
+                                }
+
+            </div>
+            <br />
+            <div class="text-center">
+                <label class="FonteMenu">@ViewBag.Mensagem</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+    </div>
+</div>

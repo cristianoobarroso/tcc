@@ -23,6 +23,7 @@ namespace Site.Models
         public int TpProduto { get; set; }
         public int QtdItem { get; set; }
         public string NomeProduto { get; set; }
+      //  public string Buffet { get; set; }
 
 
     }
