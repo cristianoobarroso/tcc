@@ -29,19 +29,19 @@
 
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon">Nome Cliente</span>
-                        @Html.TextBoxFor(f => f.NomeCliente, new { @class = "col-xs10", @placeholder = "Digite aqui", style = "height:28;px;width:310px;", autocomplete = "off" })
+                        @Html.TextBoxFor(f => f.NomeCliente, new { @class = "col-xs10", @placeholder = "Digite aqui", autocomplete = "off" })
                         @Html.ValidationMessageFor(u => u.NomeCliente, null, new { @style = "color: red;font-weight:bold;" })
                     </div>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon">Email Cliente</span>
-                        @Html.TextBoxFor(f => f.EmailCliente, new { @class = "col-xs-10", @placeholder = "Digite aqui", style = "height:28px;width:140px;", autocomplete = "off" })
+                        @Html.TextBoxFor(f => f.EmailCliente, new { @class = "col-xs-10", @placeholder = "Digite aqui", autocomplete = "off" })
                         @Html.ValidationMessageFor(f => f.EmailCliente, null, new { @style = "color: red;font-weight:bold;" })
                         @*<input id="txtsobrenome" type="text"   />*@
                     </div>
 
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon">CPF Cliente</span>
-                        @Html.TextBoxFor(f => f.CPFCliente, new { @class = "col-xs-10", @placeholder = "Digite aqui", style = "height:28px;width:140px;", autocomplete = "off" })
+                        @Html.TextBoxFor(f => f.CPFCliente, new { @class = "col-xs-10", @placeholder = "Digite aqui", autocomplete = "off" })
                         @Html.ValidationMessageFor(f => f.CPFCliente, null, new { @style = "color: red;font-weight:bold;" })
                         @*<input id="txtsobrenome" type="text"   />*@
                     </div>

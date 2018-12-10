@@ -31,19 +31,19 @@
 
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon">Nome Funcionario</span>
-                        @Html.TextBoxFor(f => f.NomeFuncionario, new { @class = "col-xs10", @placeholder = "Digite aqui", style = "height:28;px;width:310px;", autocomplete = "off" })
+                        @Html.TextBoxFor(f => f.NomeFuncionario, new { @class = "col-xs10", @placeholder = "Digite aqui", autocomplete = "off" })
                         @Html.ValidationMessageFor(u => u.NomeFuncionario, null, new { @style = "color: red;font-weight:bold;" })
                     </div>
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon">Login</span>
-                        @Html.TextBoxFor(f => f.Login, new { @class = "col-xs-10", @placeholder = "Digite aqui", style = "height:28px;width:140px;", autocomplete = "off" })
+                        @Html.TextBoxFor(f => f.Login, new { @class = "col-xs-10", @placeholder = "Digite aqui", autocomplete = "off" })
                         @Html.ValidationMessageFor(f => f.Login, null, new { @style = "color: red;font-weight:bold;" })
                         @*<input id="txtsobrenome" type="text"   />*@
                     </div>
 
                     <div style="margin-bottom: 25px" class="input-group">
                         <span class="input-group-addon">Senha</span>
-                        @Html.TextBoxFor(f => f.Senha, new { @class = "col-xs-10", @placeholder = "Digite aqui", style = "height:28px;width:140px;", autocomplete = "off" })
+                        @Html.TextBoxFor(f => f.Senha, new { @class = "col-xs-10", @placeholder = "Digite aqui", autocomplete = "off" })
                         @Html.ValidationMessageFor(f => f.Senha, null, new { @style = "color: red;font-weight:bold;" })
                         @*<input id="txtsobrenome" type="text"   />*@
                     </div>

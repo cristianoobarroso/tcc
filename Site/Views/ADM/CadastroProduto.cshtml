@@ -1,81 +1,50 @@
-﻿
-@{
-    ViewBag.Title = "CadastroProduto";
-    Layout = "~/SharedMaster/MasterADM.cshtml";
+﻿@{
+ViewBag.Title = "CadastroProduto";
+Layout = "~/SharedMaster/MasterADM.cshtml";
 }
 
-
+<div class="row" style="margin: 3rem 0">
+    <div class="col-sm-12 text-center">
+        <h2>Cadastro de Produtos</h2>
+    </div>
+</div>
 <div class="row">
-    <div class="col-sm-3">
-        <a href="~/ADM/Index">
-            <img src="~/img/voltar.png" width="120" height="120" />
+    <div class="col-sm-4 text-center">
+        <a class="block-link" href="~/ADM/CadastroMassa" title="Cadastrar Prato">
+            <img src="~/img/pratos.png" alt="Pratos">
+            <h4>Pratos</h4>
+        </a>
+    </div>
+    <div class="col-sm-4 text-center">
+        <a class="block-link" href="~/ADM/CadastroQueijo" title="Cadastrar Queijo">
+            <img src="~/img/queijo.png" alt="Queijos">
+            <h4>Queijos</h4>
+        </a>
+    </div>
+    <div class="col-sm-4 text-center">
+        <a class="block-link" href="~/ADM/CadastroVinho" title="Cadastrar Vinho">
+            <img src="~/img/vinho.png" alt="Vinhos">
+            <h4>Vinhos</h4>
+        </a>
+    </div>
+    <div class="col-sm-4 text-center">
+        <a class="block-link" href="/ADM/CadastroCerveja" title="Cadastrar Cerveja">
+            <img src="~/img/cerveja.png" alt="Cervejas">
+            <h4>Cervejas</h4>
+        </a>
+    </div>
+    <div class="col-sm-4 text-center">
+        <a class="block-link" href="~/ADM/CadastroBuffet" title="Cadastrar Buffet">
+            <img src="~/img/buffet-2.png" alt="Buffet">
+            <h4>Buffet</h4>
         </a>
     </div>
 </div>
-
-<div class="container">
-    <br />
-    <br />
-    <div class="text-center">
-        <h2>Cadastro de Produtos</h2>
-    </div>
-    <br />
-    <br />
-    <div class="row">
-
-        <div class="col-sm-2">
-            <div id="DivCriarFormulario" class="text-right">
-                <a href="~/ADM/CadastroVinho">
-                    <img src="~/img/vinho.png" width="100" height="100" />
-                    <br />
-                    <h4 class="FonteMenu">Cadastro de vinho</h4>
-                </a>
-            </div>
-        </div>
-
-
-
-
-        <div class="col-sm-3">
-            <div id="DivEnvioResult" class="text-center">
-                <a href="~/ADM/CadastroQueijo">
-                    <img src="~/img/queijo.png" width="100" height="100" />
-                    <br />
-                    <h4 class="FonteMenu">Cadastro de queijo</h4>
-                </a>
-            </div>
-
-
-        </div>
-
-        <div class="col-sm-2">
-            <div id="DivEnvioQuestionario" class="text-center">
-                <a href="~/ADM/CadastroMassa">
-                    <img src="~/img/pratos.png" width="100" height="100" />
-                    <br />
-                    <h4 class="FonteMenu"> Cadastro de Pratos </h4>
-                </a>
-            </div>
-
-        </div>
-        <div class="col-sm-2">
-            <div id="DivRelatorioAvaliação" class="text-right">
-                <a href="/ADM/CadastroCerveja">
-                    <img src="~/img/cerveja.png" width="100" height="100" />
-                    <br />
-                    <h4 class="FonteMenu">Cadastro de Cerveja</h4>
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div id="DivRelatorioAvaliação" class="text-right">
-                <a href="~/ADM/CadastroBuffet">
-                    <img src="~/img/duffet.png" width="100" height="100" />
-                    <br />
-                    <h4 class="FonteMenu">Cadastro de Buffet</h4>
-                </a>
-            </div>
-        </div>
-
+<div class="row" style="margin: 3rem 0">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
     </div>
 </div>

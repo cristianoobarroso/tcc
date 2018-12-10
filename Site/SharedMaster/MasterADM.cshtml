@@ -4,49 +4,34 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
-   
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <title>Casa Fragni</title>
 
 </head>
 <body>
     <div class="container">
-        <div class="well well-sm row">
+        <div class="well well-sm row" style="margin-top: 20px">
             <div class="col-sm-4 text-left">
-                <label>Casa Fragni</label>
+                <h4 class="mt-0 mb-0" style="margin-top: 5px !important">Casa Fragni</h4>
             </div>
             <div id=Identificação class="col-sm-8 text-right ">
-                <!-- <img src="~/img/instituto-infnet-original.png" width="25" /> -->
                 @using Domain.Entity;
                 @if (Session["usuariologado"] != null)
                 {
                     Fucionario u = (Fucionario)Session["usuariologado"];
                     <label class="FonteMenu">Seja bem vindo @u.NomeFuncionario</label>
                 }
-                <!-- <br /> -->
-                <label class="FonteMenu">@DateTime.Now.ToString("dd/MM/yyyy")</label>
-                <!-- <br /> -->
-                <a href="/ADM/Logout" class="btn btn-danger btn-sm">Sair</a>
+                <!-- <label class="FonteMenu">Seja bem vindo Cristiano Barroso</label> -->
+                <label class="FonteMenu" style="margin-left: 10px">@DateTime.Now.ToString("dd/MM/yyyy")</label>
+                <a href="/ADM/Logout" class="btn btn-danger btn-sm" style="margin-left: 10px">Sair</a>
             </div>
         </div>
-
-        <!-- <div id=Identificação class="text-right">
-            @using Domain.Entity;
-            @if (Session["usuariologado"] != null)
-            {
-                Fucionario u = (Fucionario)Session["usuariologado"];
-                <label class="FonteMenu">Seja bem vindo @u.NomeFuncionario</label>
-            }
-            <br />
-            <label class="FonteMenu">@DateTime.Now.ToString("dd/MM/yyyy")</label>
-            <br />
-            <a href="/ADM/Logout" class="btn btn-danger btn-sm">Sair</a>
-        </div> -->
 
         <!-- Local para entrada do conteudo das demais páginas -->
         @RenderBody()
 
         <footer>
-            © @DateTime.Now.Year
+            Copyright @DateTime.Now.Year © Casa Fragni - Todos os direitos reservados.
         </footer>
 
     </div>

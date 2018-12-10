@@ -1,64 +1,36 @@
-﻿
-@{
-    ViewBag.Title = "IndexGarçom";
-    Layout = "~/SharedMaster/MasterADM.cshtml";
+﻿@{
+ViewBag.Title = "IndexGarçom";
+Layout = "~/SharedMaster/MasterADM.cshtml";
 }
 
-<div class="container">
-    <br />
-    <br />
-    <div class="text-center">
+<div class="row" style="margin: 3rem 0">
+    <div class="col-sm-12 text-center">
         <h2>Menu</h2>
     </div>
-    <br />
-    <br />
-    <div class="row">
-
-
-        <div class="col-sm-3">
-            <div id="DivCriarFormulario" class="text-right">
-                <a href="~/ADM/Relatorios">
-                    <img src="~/img/relatorio.png" width="150" height="150" />
-                    <br />
-                    <h4 class="FonteMenu">Relatórios</h4>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-sm-3">
-            <div id="DivEnvioResult" class="text-center">
-                <a href="~/ADM/CadastroCliente">
-                    <img src="~/img/cad_cli.png" width="150" height="150" />
-                    <br />
-                    <h4 class="FonteMenu">Cadastro De Clientes</h4>
-                </a>
-            </div>
-        </div>
-
-
-
-        <div class="col-sm-3">
-            <div id="DivEnvioQuestionario" class="text-center">
-                <a href="~/ADM/CadastroConta">
-                    <img src="~/img/conta_menu_principal.png" width="150" height="150" />
-                    <br />
-                    <h4 class="FonteMenu"> Abrir Conta </h4>
-                </a>
-            </div>
-        </div>
-     
-        <div class="col-sm-3">
-            <div id="DivEnvioQuestionario" class="text-center">
-                <a href="~/ADM/Venda_conta_buffet">
-                    <img src="~/img/duffet.png" width="150" height="150" />
-                    <br />
-                    <h4 class="FonteMenu"> Venda Buffet</h4>
-                </a>
-            </div>
-        </div>
-
-
-    </div>
-
 </div>
-
+<div class="row">
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/Relatorios" title="Relatórios">
+            <img src="~/img/relatorio.png" alt="Relatórios">
+            <h4>Relatórios</h4>
+        </a>
+    </div>
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/CadastroCliente" title="Cadastro de Clientes">
+            <img src="~/img/cad_cli.png" alt="Cadastro de Clientes">
+            <h4>Cadastro de Clientes</h4>
+        </a>
+    </div>
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/CadastroConta" title="Abrir Conta">
+            <img src="~/img/conta_menu_principal.png" alt="Abrir Conta">
+            <h4>Abrir Conta</h4>
+        </a>
+    </div>
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/Venda_conta_buffet" title="Abrir Conta Buffet">
+            <img src="~/img/buffet.png" alt="Abrir Conta Buffet">
+            <h4>Abrir Conta Buffet</h4>
+        </a>
+    </div>
+</div>

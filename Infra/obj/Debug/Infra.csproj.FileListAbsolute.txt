@@ -38,3 +38,19 @@ C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.dll
 C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.pdb
 C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.Migrations.InitialCreate.resources
 C:\Users\i.anderson\Desktop\Buffet\BuffetOld\Infra\obj\Debug\Infra.csproj.GenerateResource.Cache
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\Infra.dll.config
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\Infra.dll
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\Infra.pdb
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\Domain.dll
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\EntityFramework.dll
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\Domain.pdb
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\EntityFramework.xml
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\obj\Debug\Infra.csprojAssemblyReference.cache
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\obj\Debug\Infra.Migrations.InitialCreate.resources
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\obj\Debug\Infra.csproj.GenerateResource.cache
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\obj\Debug\Infra.csproj.CoreCompileInputs.cache
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\obj\Debug\Infra.csproj.CopyComplete
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\obj\Debug\Infra.dll
+C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Infra\obj\Debug\Infra.pdb
