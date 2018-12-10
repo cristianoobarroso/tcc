@@ -38,26 +38,14 @@
         .ToList()
         ;
 }
-<div class="row">
-    <div class="col-sm-3">
-        <a href="~/ADM/CadastroConta">
-            <img src="~/img/voltar.png" width="120" height="120" />
-        </a>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
-        <div class="d1">
-            <br />
-            <div id="DivIncluir" class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="panel-title text-center">Contas Abertas</div>
-                </div>
-
-
+<div class="row" style="margin: 5rem 0">
+    <div class="col-sm-6 col-sm-offset-3">
+        <div id="DivIncluir" class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title text-center">Contas Abertas</div>
+            </div>
+            <div class="panel-body">
                 <table class="table table-striped table-bordered table-hover table-condensed">
                     <tr>
                         @*<td>
@@ -75,7 +63,7 @@
                         <td class="text-center">
                             <label class="FonteMenuLabel text-center">Ações</label>
                         </td>
-
+    
                     </tr>
                     @foreach (var item in listContasAbertas)
                     {
@@ -94,23 +82,29 @@
                             </td>
                             <td class="text-center FonteMenu">
                                 @Html.ActionLink("Visualizar", "VerificarContaAberta", new { idConta = item.IdConta }, new { @class = "BTN_ALt" })
-
+    
                                 @Html.ActionLink("Editar", "EditContaAberta", new { id = item.IdConta, nMesa = item.NumeroMesa }, new { @class = "BTN_ALt" })
-
+    
                                 @Html.ActionLink("Excluir", "DeletContaAberta", new { id = item.IdConta }, new { @class = "BTN_ALt" })
-
+    
                                 @Html.ActionLink("Encerrar", "TheEndContaAberta", new { id = item.IdConta }, new { @class = "BTN_ALt" })
-
+    
                             </td>
                         </tr>
                     }
-
+    
                 </table>
             </div>
         </div>
-    </div>
+	</div>
 </div>
-<div class="col-sm-3">
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
+    </div>
 </div>
 
 

@@ -1,93 +1,43 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Relatorios";
     Layout = "~/SharedMaster/MasterADM.cshtml";
 }
+<div class="row" style="margin: 3rem 0">
+    <div class="col-sm-12 text-center">
+        <h2>Relatórios</h2>
+    </div>
+</div>
 <div class="row">
-    <div class="col-sm-3">
-        <a href="~/ADM/Index">
-            <img src="~/img/voltar.png" width="120" height="120" />
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/RelatorioCliente" title="Clientes">
+            <img src="~/img/rel-clientes.png" alt="Clientes">
+            <h4>Clientes</h4>
+        </a>
+    </div>
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/RelatorioUsuario" title="Usuários">
+            <img src="~/img/rel-usuarios.png" alt="Usuários">
+            <h4>Usuários</h4>
+        </a>
+    </div>
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/Relatorio_Produtos" title="Vendas">
+            <img src="~/img/rel-vendas.png" alt="Vendas">
+            <h4>Vendas</h4>
+        </a>
+    </div>
+    <div class="col-sm-3 text-center">
+        <a class="block-link" href="~/ADM/MenuProdCadastro" title="Produtos">
+            <img src="~/img/rel-produtos.png" alt="Produtos">
+            <h4>Produtos</h4>
         </a>
     </div>
 </div>
-<div class="container">
-    <br />
-    <br />
-    <div class="text-center">
-        <h2>Relatórios</h2>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-   
-    <div class="row">
-
-        <div class="col-sm-3">
-            <div id="DivCriarFormulario" class="text-right">
-                <a href="~/ADM/RelatorioCliente">
-                    @*<img src="~/img/CriarQuestionario.png" width="150" height="150" />*@
-                    @*<br />*@
-                    <h4 class="FonteMenu">Relatório de Clientes</h4>
-                </a>
-            </div>
-            @*<br />
-            <br />
-            <div id="DivCriarFormulario" class="text-right">
-                <a href="~/ADM/Relatorios">
-                    <img src="~/img/relatorio.png" width="150" height="150" />
-                    <br />
-                    <h4 class="FonteMenu">Relatórios</h4>
-                </a>
-            </div>*@
-        </div>
-
-        <div class="col-sm-3">
-            <div id="DivEnvioResult" class="text-center">
-                <a href="~/ADM/RelatorioUsuario">
-                    @*<img src="~/img/user.png" width="150" height="150" />*@
-                    @*<br />*@
-                    <h4 class="FonteMenu">Relatório de Usuários</h4>
-                </a>
-            </div>
-            @*<br />
-            <br />
-            <div id="DivEnvioResult" class="text-center">
-                <a href="~/ADM/CadastroCliente">
-                    <img src="~/img/cad_cli.png" width="150" height="150" />
-                    <br />
-                    <h4 class="FonteMenu">Cadastro De Clientes</h4>
-                </a>
-            </div>*@
-        </div>
-
-
-
-        <div class="col-sm-3">
-           <div id="DivEnvioQuestionario" class="text-center">
-                <a href="~/ADM/Relatorio_Produtos">
-                    @*<img src="~/img/conta_menu_principal.png" width="150" height="150" />*@
-                    @*<br />*@
-                    <h4 class="FonteMenu"> Relatório De Vendas </h4>
-                </a>
-            </div>
-        </div>
-
-
-        <div class="col-sm-3">
-            <div id="DivEnvioQuestionario" class="text-center">
-                <a href="~/ADM/MenuProdCadastro">
-                    @*<img src="~/img/conta_menu_principal.png" width="150" height="150" />*@
-                    @*<br />*@
-                    <h4 class="FonteMenu"> Relatório De Produtos cadastrados </h4>
-                </a>
-            </div>
-        </div>
-
-
+<div class="row" style="margin-top: 5rem">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
     </div>
 </div>
-
-

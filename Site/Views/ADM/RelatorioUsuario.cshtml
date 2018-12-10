@@ -5,31 +5,18 @@
     ViewBag.Title = "RelatorioUsuario";
     Layout = "~/SharedMaster/MasterADM.cshtml";
 }
-<div class="row">
-    <div class="col-sm-3">
-        <a href="~/ADM/Relatorios">
-            <img src="~/img/voltar.png" width="120" height="120" />
-        </a>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
-        <div class="d1">
-            <br />
-            <div id="DivIncluir" class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="panel-title text-center">Relatório Funcionários</div>
-                </div>
+<div class="row" style="margin: 5rem 0">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div id="DivIncluir" class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title text-center">Relatório Funcionários</div>
+            </div>
+            <div class="panel-body">
                 @{
                     Fucionario c = new Fucionario();
                     FuncionarioRepository cr = new FuncionarioRepository();
                     List<Fucionario> usuFuncionario = new List<Fucionario>(cr.ObterTodos());
                 }
-
-
                 <table class="table table-striped table-bordered table-hover table-condensed">
                     <tr>
                         <td class="text-center">
@@ -70,27 +57,29 @@
                                 {
                                     <label class="FonteMenu text-center">Gerente</label>
                                 }
-
+    
                             </td>
-
+    
                             @using (Html.BeginForm("AlteraUsuarioID", "ADM", FormMethod.Get, null))
                             {
                                 <td class="text-center">
                                     @Html.ActionLink("Editar", "EditFunc", new { id = item.IdFuncionario }, new { @class = "BTN_ALt" })
-                              
+                                
                                     @Html.ActionLink("Excluir", "DeletFunc", new { id = item.IdFuncionario }, new { @class = "BTN_ALt" })
                                 </td>
                             }
-
-
                         </tr>
                     }
-
                 </table>
             </div>
         </div>
     </div>
 </div>
-<div class="col-sm-3">
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
+    </div>
 </div>
-

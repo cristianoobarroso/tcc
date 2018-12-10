@@ -232,6 +232,10 @@
     <Content Include="img\fundo_verde.jpg" />
     <Content Include="img\pratos.jpg" />
     <Content Include="img\queijo.jpg" />
+    <Content Include="img\rel-clientes.png" />
+    <Content Include="img\rel-produtos.png" />
+    <Content Include="img\rel-usuarios.png" />
+    <Content Include="img\rel-vendas.png" />
     <Content Include="img\relatorio.png" />
     <Content Include="img\rel_vendas.png" />
     <Content Include="img\user.png" />

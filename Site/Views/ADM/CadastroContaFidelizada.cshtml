@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "CadastroContaFidelizada";
     Layout = "~/SharedMaster/MasterADM.cshtml";
 }
@@ -8,11 +7,8 @@
 @using Infra.Repository;
 @model Site.Models.ModelContaAvulsa
 
-
-<div class="row">
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
+<div class="row" style="margin: 5rem 0">
+    <div class="col-sm-6 col-sm-offset-3">
         <div id="CriarQuestionario" class="panel panel-primary">
             <div class="panel-heading">
                 Conta Fidelizada
@@ -47,7 +43,7 @@
                 
                     <br />
                     <button type="submit" class="btn btn-success btn-sm">Continuar</button>
-                    <a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Voltar</a>//por action link para redirecionar de volta ao menu
+                    <!-- <a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Voltar</a>//por action link para redirecionar de volta ao menu -->
                 }
 
 
@@ -58,11 +54,13 @@
 
             </div>
         </div>
-    </div>
-    <div class="col-sm-3">
+	</div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
     </div>
 </div>
-
-
-
-

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "CadastroContaAvulsa";
     Layout = "~/SharedMaster/MasterADM.cshtml";
 }
@@ -8,22 +7,18 @@
 @using Infra.Repository;
 @model Site.Models.ModelContaAvulsa
 
-
 @{
     var teste = 0;
     Model.IdCliente = teste;
 }
 
-<div class="row">
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
+<div class="row" style="margin: 5rem 0">
+    <div class="col-sm-6 col-sm-offset-3">
         <div id="CriarQuestionario" class="panel panel-primary">
             <div class="panel-heading">
                 Conta avulsa
             </div>
             <div class="panel-body">
-
                 @using (Html.BeginForm("CadastroContaAvulsaOld", "ADM", FormMethod.Post))
                 {
                     CervejaRepository cra = new CervejaRepository();
@@ -120,7 +115,6 @@
                     <button type="submit" class="btn btn-success btn-sm">Incluir Pedido </button>
                     @*<a href="@Request.UrlReferrer" class="btn btn-success btn-sm">Finalizar</a>*@
                 }
-
             </div>
             <br />
             <div class="text-center">
@@ -128,6 +122,12 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-3">
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
     </div>
 </div>
