@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "VinhosCadastrados";
     Layout = "~/SharedMaster/MasterADM.cshtml";
 }
@@ -7,25 +6,13 @@
 @using Domain.Entity
 @using Infra.Repository;
 
-
-<div class="row">
-    <div class="col-sm-3">
-        <a href="~/ADM/MenuProdCadastro">
-            <img src="~/img/voltar.png" width="120" height="120" />
-        </a>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
-        <div class="d1">
-            <br />
-            <div id="DivIncluir" class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="panel-title text-center">Vinhos Cadastrados</div>
-                </div>
+<div class="row" style="margin: 5rem 0">
+    <div class="col-sm-8 col-sm-offset-2">
+        <div id="DivIncluir" class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title text-center">Vinhos Cadastrados</div>
+            </div>
+            <div class="panel-body">
                 @{
                     VinhoRepository vr = new VinhoRepository();
                     List<Vinho> listVinho = new List<Vinho>(vr.ObterTodos());
@@ -68,12 +55,16 @@
                         </td>
                     </tr>
                     }
-
                 </table>
             </div>
         </div>
     </div>
 </div>
-<div class="col-sm-3">
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
+    </div>
 </div>
-
