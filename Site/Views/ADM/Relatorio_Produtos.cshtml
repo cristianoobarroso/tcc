@@ -1,38 +1,26 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Relatorio_Produtos";
     Layout = "~/SharedMaster/MasterADM.cshtml";
 }
 
+<div class="row" style="margin: 3rem 0">
+    <div class="col-sm-12 text-center">
+        <h2>Relatório de Vendas</h2>
+    </div>
+</div>
 <div class="row">
-    <div class="col-sm-3">
-        <a href="~/ADM/Relatorios">
-            <img src="~/img/voltar.png" width="120" height="120" />
+    <div class="col-sm-12 text-center">
+        <a class="block-link" href="~/ADM/RelatorioVendaVinho" title="Por Produto">
+            <img src="~/img/relatorio.png" alt="Por Produto">
+            <h4>Por Produto</h4>
         </a>
     </div>
 </div>
-
-<div class="container">
-    <br />
-    <br />
-    <div class="text-center">
-        <h2>Relatório de venda Produtos</h2>
-    </div>
-    <br />
-    <br />
-    <div class="row">
-        <br />
-        <br />
-      
-        <div class="col-sm-7 ">
-            <div id="DivCriarFormulario" class="text-right">
-                <a href="/ADM/RelatorioVendaVinho">
-                    <img src="~/img/relatorio.png" width="100" height="100" />
-                  
-                    <h4 class="FonteMenu">Relatório de Produtos</h4>
-                </a>
-            </div>
-        </div>      
+<div class="row" style="margin-top: 5rem">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
     </div>
 </div>
-

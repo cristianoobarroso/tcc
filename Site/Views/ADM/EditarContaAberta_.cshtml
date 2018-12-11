@@ -8,12 +8,8 @@
 @using Infra.Repository;
 @model Site.Models.ModelContaAvulsa
 
-
-
-<div class="row">
-    <div class="col-sm-3">
-    </div>
-    <div class="col-sm-6">
+<div class="row" style="margin: 5rem 0">
+    <div class="col-sm-6 col-sm-offset-3">
         <div id="CriarQuestionario" class="panel panel-primary">
             <div class="panel-heading">
                 Conta avulsa
@@ -122,12 +118,17 @@
                                 }
 
             </div>
-            <br />
             <div class="text-center">
                 <label class="FonteMenu">@ViewBag.Mensagem</label>
             </div>
         </div>
     </div>
-    <div class="col-sm-3">
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <button class="btn btn-success" type="button" onclick="(function(){window.history.back()})()">
+            <i class="glyphicon glyphicon-arrow-left"></i>
+            Voltar
+        </button>
     </div>
 </div>

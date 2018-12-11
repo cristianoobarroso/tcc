@@ -11,8 +11,9 @@ a {
     transition: .3s
 }
 
-a:hover {
-    text-decoration: none
+a:hover, a:active, a:focus {
+    text-decoration: none;
+    transition: .3s
 }
 
 .block-link {
