@@ -12,7 +12,7 @@ namespace Domain.Entity
         //public virtual string TipoMassa { get; set; }
         public virtual string NomeMassa { get; set; }
         public virtual int TpProduto { get; set; }
-        public decimal Valor { get; set; }
+        public virtual decimal Valor { get; set; }
                                            // public virtual int QTDEMassaEstoque { get; set; }
     }
 }

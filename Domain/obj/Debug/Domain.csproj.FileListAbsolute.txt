@@ -20,3 +20,8 @@ C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Domai
 C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Domain\obj\Debug\Domain.dll
 C:\Users\r.carvalho\Google Drive\Profissional\Pessoais\Casa Fragni\Projeto\Domain\obj\Debug\Domain.pdb
+C:\Users\Fabricio Barroso\Documents\TCCRIS\tcc\Domain\bin\Debug\Domain.dll
+C:\Users\Fabricio Barroso\Documents\TCCRIS\tcc\Domain\bin\Debug\Domain.pdb
+C:\Users\Fabricio Barroso\Documents\TCCRIS\tcc\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Fabricio Barroso\Documents\TCCRIS\tcc\Domain\obj\Debug\Domain.dll
+C:\Users\Fabricio Barroso\Documents\TCCRIS\tcc\Domain\obj\Debug\Domain.pdb
