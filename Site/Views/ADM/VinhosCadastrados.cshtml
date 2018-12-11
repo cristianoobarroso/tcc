@@ -20,13 +20,16 @@
                 <table class="table table-striped table-bordered table-hover table-condensed">
                     <tr>
                         <td class="text-center">
-                            <label class="FonteMenuLabel text-center">Nome </label>
+                            <label class="FonteMenuLabel text-center">Nome</label>
                         </td>
                         <td class="text-center">
-                            <label class="FonteMenuLabel text-center">Tipo </label>
+                            <label class="FonteMenuLabel text-center">Valor</label>
                         </td>
                         <td class="text-center">
-                            <label class="FonteMenuLabel text-center">Quantidade </label>
+                            <label class="FonteMenuLabel text-center">Tipo</label>
+                        </td>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">Quantidade</label>
                         </td>
                         <td class="text-center">
                             <label class="FonteMenuLabel text-center">Nacionalidade</label>
@@ -34,20 +37,23 @@
                     </tr>
                     @foreach (var item in listVinho)
                     {
-                        <tr>
-                            <td class="text-center">
-                                <label class="FonteMenuLabel text-center">@item.NomeVinho</label>
-                            </td>
-                            <td class="FonteMenu text-center">
-                                <label class="FonteMenuLabel text-center">@item.TipoVinho</label>
-                            </td>
-                            <td class="text-center">
-                                <label class="FonteMenuLabel text-center">@item.QTDVinhoEstoque</label>
-                            </td>
-                            <td class="text-center">
-                                <label class="FonteMenu text-center">@item.Nacionalidade</label>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">@item.NomeVinho</label>
+                        </td>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">@item.ValorVinho</label>
+                        </td>
+                        <td class="FonteMenu text-center">
+                            <label class="FonteMenuLabel text-center">@item.TipoVinho</label>
+                        </td>
+                        <td class="text-center">
+                            <label class="FonteMenuLabel text-center">@item.QTDVinhoEstoque</label>
+                        </td>
+                        <td class="text-center">
+                            <label class="FonteMenu text-center">@item.Nacionalidade</label>
+                        </td>
+                    </tr>
                     }
                 </table>
             </div>

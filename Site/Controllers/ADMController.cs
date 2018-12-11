@@ -701,8 +701,8 @@ namespace Site.Controllers
             m.NomeMassa = mdm.NomeMassa;
             // m.QTDEMassaEstoque = mdm.QTDEMassaEstoque;
             // m.TipoMassa = mdm.TipoMassa;
-            m.Valor =
-             m.TpProduto = 4;
+            m.Valor = Convert.ToDecimal(mdm.Valor);
+            m.TpProduto = 4;
             mr.Insert(m);
 
             ViewBag.Mensagem = "Massa " + m.NomeMassa + ", cadastrada com sucesso.";
