@@ -1,0 +1,6 @@
+.vs/
+*.cache
+Site/bin/Site.dll
+Site/bin/Site.pdb
+Site/obj/Debug/Site.dll
+Site/obj/Debug/Site.pdb
